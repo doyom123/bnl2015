@@ -1,0 +1,399 @@
+* {
+	margin: 0;
+}
+
+body {
+	font-family: Sans-Serif;
+	overflow: hidden;
+}
+
+/*----------------------------------- SIDEBAR------------------------------   */
+
+#sidebarTop {
+	position: fixed;
+	width: 210px;
+	top: 0;
+	bottom: 0;
+	background-color: #ECECEF;
+	z-index: 10;
+	overflow-x: hidden;
+	
+	
+}
+#sidebarBottom {
+	position: fixed;
+	width: 223px;
+	top: 50px;
+	bottom: 0;
+	background-color: #DDDDDD;
+	z-index: 10;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+
+a {
+	
+	color: black;
+}
+
+a:link {
+	
+}
+
+a:active {
+	
+}
+a:visited {
+	color: #333333;
+}
+
+.menuButtons {
+	padding-left: 8px;
+	padding-right: 4px;
+	
+}
+
+#BCF:hover {
+	color: #06aed5;
+}
+
+#CDCE:hover {
+	color: #EF0259;
+}
+
+#S7:hover {
+	color: #FFC600;
+}
+
+.selectedMenuBCF {
+	color: #06aed5;
+}
+
+.selectedMenuCDCE {
+	color: #dd1c1a;
+}
+
+.selectedMenuS7 {
+	color: #4caf50;
+}
+
+#menuContainer {
+	padding-top: 15px;
+	padding-left: 4px;
+	background-color: #191919;
+}
+
+.slash {
+	color: #4c5c68;
+}
+
+.search {
+	width:180px;
+	margin-left: 10px;
+	border-style: none;
+	
+}
+
+#searchContainer {
+	padding-top: 15px;
+	padding-left: 2px;
+	padding-bottom: 15px;
+	background-color: #191919;
+}
+
+#infoContainer {
+	
+}
+#info {
+	
+}
+
+.clickRack {
+	padding-bottom: 20px;
+	padding-left: 8px;
+	padding-right: 8px;
+	background-color: #06aed5;
+}
+.clickRackRoom {
+	text-align: right;
+	font-style: italic;
+	font-size: 12px;
+	padding-top: 5px;
+}
+.clickRackName{
+	padding-right: 4px;
+
+}
+
+.clickRackInfo {
+	font-size: 12px;
+	font-family: "Courier New", Courier, monospace;
+	
+}
+.rackinfoheader {
+	font-size: 10px;
+	
+}
+
+
+
+.rackposition {
+	background-color: #CCCCCC;
+	margin-left: 0;
+	margin-top: 8px;
+	width: 35px;
+	
+	
+	
+}
+
+.rackname {
+	margin-left: 37px;
+	padding-right: 50px;
+	
+	
+	background-color: #DDDDDD;
+}
+.rackinfo {
+	
+	font-size: 10px;
+	list-style-type: circle;
+	font-family: "Courier New", Courier, monospace;
+	background-color: #F9FDEE;
+	margin-left: -20px;
+
+}
+
+.rackinfocontainer {
+	background-color: #F9FDEE;
+	
+	padding-top: 5px;
+	padding-bottom: 5px;
+	
+} 
+
+#tooltipSearch {
+  position: absolute;           
+  text-align: center;           
+  width: 200px;                  
+  height: 130px;                 
+  padding-top: 4px;             
+  font: 10px sans-serif;        
+  
+  
+  border: 0px;      
+  border-radius: 0px;           
+  pointer-events: none;     
+  z-index: 10;    
+
+}
+
+#searchBox {
+	z-index: 20;
+}
+
+.searchText {
+	z-index: 50;
+	width: 200px;
+	height: 200px;
+	
+}
+
+#searchLink {
+	pointer-events: inherit;
+}
+
+
+#svgInfo {
+	
+}
+.searchResultBox {
+	padding-top: 5px;
+	padding-bottom: 20px;
+	padding-left: 8px;
+	padding-right: 7px;
+	
+	pointer-events: none;
+}
+
+.BCF {
+padding-top: 5px;
+	padding-bottom: 20px;
+	padding-left: 8px;
+	padding-right: 7px;
+	
+	
+	background-color: #06aed5;
+}
+
+
+.BCFSearch {
+padding-top: 5px;
+	padding-bottom: 20px;
+	padding-left: 8px;
+	padding-right: 7px;
+	
+	
+
+}
+#labelsSearchResult {
+	font-size: 12px;
+
+}
+
+
+.Sigma7 {
+padding-top: 5px;
+	padding-bottom: 20px;
+	padding-left: 8px;
+	padding-right: 7px;
+	
+	background-color: #FFC600;
+}
+
+.Sigma7Search {
+padding-top: 5px;
+	padding-bottom: 20px;
+	padding-left: 8px;
+	padding-right: 7px;
+	
+	
+}
+
+.CDCE {
+padding-top: 5px;
+	padding-bottom: 20px;
+	padding-left: 8px;
+	padding-right: 7px;
+	
+	
+	background-color: #F10023;
+}
+
+.CDCESearch {
+padding-top: 5px;
+	padding-bottom: 20px;
+	padding-left: 8px;
+	padding-right: 7px;
+	
+	
+	
+}
+
+.labelsRoom {
+	text-align: right;
+	font-style: italic;
+	font-size: 12px;
+}
+#labelsRackname {
+	
+	float: right;
+	
+}
+
+.labelsPosition {
+	background-color: #CCCCCC;
+	margin-left: 0;
+	margin-top: 8px;
+	width: 35px;
+}
+
+.labelsInfoContainer {
+	background-color: #F9FDEE;
+	
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.labelsInfo {
+	font-size: 10px;
+	list-style-type: circle;
+	font-family: "Courier New", Courier, monospace;
+	background-color: #F9FDEE;
+	margin-left: -20px;
+
+}
+.labelsModelname {
+
+}
+
+/*-------------------------------------------------------------------------------*/ 
+
+
+#display {
+	background-color: #DDDDDD;
+	position: relative;
+	margin-left: 223px;
+	z-index: 2;
+}
+
+.textName {
+	font-size: 8px;
+	font-family: Tahoma,Verdana,Segoe,sans-serif;
+	color: black;
+	
+	
+}
+
+div.tooltip {   
+  position: absolute;           
+  text-align: center;           
+  width: 60px;                  
+  height: 28px;                 
+  padding-top: 4px;             
+  font: 10px sans-serif;        
+  background: black;
+  color: white;   
+  border: 0px;      
+  border-radius: 0px;           
+  pointer-events: none;     
+  z-index: 10;    
+}
+
+#hidden {
+	display:none;
+}
+
+.selected {
+	fill: white;
+}
+
+.selectedSearch {
+	fill: white;
+}
+
+.lineBorderCDCE {
+
+}
+
+.blockBCF {
+
+}
+
+.blockS7 {
+
+}
+/*-----------------------------------------------------------*/
+.node {
+  cursor: pointer;
+}
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font: 10px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+
+/*----------------------------------------------------------*/
+
+

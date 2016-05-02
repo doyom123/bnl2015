@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="d3.min.js" charset="utf-8"></script>
+	<script src="jquery-2.1.4.min.js"></script>
+	<script src="jquery-ui.min.js"></script>
+	<script type="text/javascript" src="info.js"></script>
+	<script type="text/javascript" src="search.js"></script>
+	<link href="style.css" rel="stylesheet" type="text/css" >
+	<link rel="stylesheet" href="jquery-ui.css">
+</head>
+<body>
+
+
+	
+	
+	<div id="sidebarTop">
+		<!--
+		<div id="menuContainer"> 
+			<a href=# class="menuButtons" id="BCF"> BCF </a><span class="slash">/</span>
+			<a href=# class="menuButtons" id="S7"> S7 </a><span class="slash">/</span>
+			<a href=# class="menuButtons" id="CDCE"> CDCE </a><span class="slash">/</span>
+			<a href=# class="menuButtons" id="HOME">H</a>
+		</div>
+		-->
+		<!--
+		<div id="searchContainer">
+			
+			<form >
+				<input type="text" id="search" placeholder="" />
+			</form>
+		
+		</div>
+		-->
+		<div class="ui-widget" id="searchContainer">
+			<label for="tags"> </label>
+			<form>
+			<input type="text" id="tags" class="search" />
+			</form>
+		</div>
+		
+		
+	</div>
+	<div id="sidebarBottom">
+		<div id="infoContainer">
+			<div id="info">
+			
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<script type="text/javascript">
+	
+	$("#S7").click(function() {
+		currentRoom = 185;
+		d3.select(".tooltip").remove();
+		$(".menuButtons").removeClass("selectedMenuBCF");
+		$(".menuButtons").removeClass("selectedMenuCDCE");
+		$(this).toggleClass("selectedMenuS7");
+		d3.select("svg")
+		  .attr("transform", "translate(50,100)"  + " scale(1)");	
+		
+	});
+
+	$("#BCF").click(function() {
+		currentRoom = 183;
+		d3.select(".tooltip").remove();
+		$(".menuButtons").removeClass("selectedMenuS7");
+		$(".menuButtons").removeClass("selectedMenuCDCE");
+		$(this).toggleClass("selectedMenuBCF");
+		d3.select("svg")
+		  .attr("transform", "translate(-100,-400)" + " scale(1)");	
+	});
+		
+	$("#CDCE").click(function() {
+		currentRoom = 186;
+		d3.select(".tooltip").remove();
+		$(".menuButtons").removeClass("selectedMenuBCF");
+		$(".menuButtons").removeClass("selectedMenuS7");
+		$(this).toggleClass("selectedMenuCDCE");
+		d3.select("svg")
+		  .attr("transform", "translate(-800,-400)" + " scale(1)");	
+	});
+	
+	plotLocations();
+	availableTag = autoCompleteList();
+	
+	$(function() {
+		autoCompleteList();
+		$( "#tags" ).autocomplete({
+		  source: availableTag,
+		  minLength: 2,
+		  delay: 500
+    });
+  });
+	</script>
+	
+	
+	
+
+</body>
+
+</html>
